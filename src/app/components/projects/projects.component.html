@@ -1,114 +1,275 @@
-
-
 <div class="container">
-      <section class="page-header fade-in">
-        <h1 class="page-title">My Projects</h1>
-        <p class="page-subtitle">
-          A showcase of my work, experiments, and learning experiences in software development.
-        </p>
-      </section>
 
-      <section class="projects-container slide-up">
-        @for (project of projects; track project.id) {
-          <div class="project-section card">
-            <h2 class="project-title">{{ project.title }} <span class="project-date">{{ project.date }}</span></h2>
-            <p class="project-description">{{ project.shortDescription }}</p>
-            
-            <div class="project-details">
-              <h3 class="section-heading">The Idea</h3>
-              <p>{{ project.idea }}</p>
-              
-              <h3 class="section-heading">Features of the Website</h3>
-              <ul class="features-list">
-                @for (feature of project.features; track $index) {
-                  <li>{{ feature }}</li>
+
+  
+  <section class="page-header fade-in">
+  
+  
+    <h1 class="page-title">My Projects</h1>
+  
+  
+    <p class="page-subtitle">
+  
+      A showcase of my work, experiments, and learning experiences in software development.
+  
+  
+    </p>
+  
+    <!-- <a routerLink="/projects/1" class="btn btn-primary mt-3">View Latest Project</a> -->
+  
+  </section>
+
+    <!-- <section class="filter-section py-4">
+        <div class="filter-container">
+            <input type="text" [(ngModel)]="searchQuery" placeholder="Search projects..." class="form-control" aria-label="Search projects">
+            <div class="filter-tags mt-2">
+                @for (tag of availableTags; track $index) {
+                    <button (click)="filterByTag(tag)" class="btn btn-secondary mr-2" [class.active]="selectedTag === tag">{{ tag }}</button>
                 }
-              </ul>
             </div>
-          </div>
-        }
-      </section>
+        </div>
+    </section> -->
 
-      <section class="comments-section card">
-        <h2 class="section-title">Comments</h2>
-        
-        <div class="comments-list">
-          @if (comments.length === 0) {
-            <p class="no-comments">No comments yet. Be the first to leave a comment!</p>
-          } @else {
-            @for (comment of comments; track $index) {
-              <div class="comment-item">
-                <div class="comment-header">
-                  <h4 class="comment-author">{{ comment.name }}</h4>
-                  <span class="comment-date">{{ comment.date | date:'medium' }}</span>
-                </div>
-                <p class="comment-text">{{ comment.message }}</p>
+  
+    <section class="projects-container slide-up">
+
+
+  
+  
+      @for (project of searchProjects(); track project.id) {
+  
+  
+        <div class="project-section card">
+              <!-- <img src="{{ project.imageUrl }}" alt="{{ project.title }} thumbnail" loading="lazy"> -->
+              <!-- <div class="project-tags">
+                  @for (tag of project.tags; track $index) {
+                      <span>{{ tag }}</span>
+                  }
+              </div> -->
+
+
+              
+              <h2 class="project-title">
+              
+                <a [routerLink]="['/projects', project.id]">{{ project.title }}</a>
+              
+                <span class="project-date">{{ project.date }}</span>
+              
+              
+              </h2>
+              
+              
+              <p class="project-description">{{ project.shortDescription }}</p>
+              
+              
+              <div class="project-details">
+              
+              
+                <h3 class="section-heading">The Idea</h3>
+              
+              
+                <p>{{ project.idea }}</p>
+              
+              
+                <h3 class="section-heading">Features of the Website</h3>
+              
+              
+                <ul class="features-list">
+              
+                  @for (feature of project.features; track $index) {
+              
+                    <li>{{ feature }}</li>
+              
+                  }
+              
+                </ul>
+              
+              
               </div>
-            }
+          
+          
+            </div>
+      
+      
           }
-        </div>
-        
-        <div class="comment-form-container">
-          <h3>Leave a Comment</h3>
-          <form [formGroup]="commentForm" (ngSubmit)="submitComment()" class="comment-form">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input 
-                type="text" 
-                id="name" 
-                formControlName="name" 
-                class="form-control"
-                [class.is-invalid]="nameControl?.invalid && (nameControl?.dirty || nameControl?.touched)"
-              >
-              @if (nameControl?.invalid && (nameControl?.dirty || nameControl?.touched)) {
-                <div class="error-message">
-                  @if (nameControl?.errors?.['required']) {
-                    <span>Name is required</span>
-                  }
-                </div>
-              }
+  </section>
+
+  
+  <section class="comments-section card">
+
+  
+    <h2 class="section-title">Comments</h2>
+  
+  
+    <div class="comments-list">
+  
+  
+      @if (comments.length === 0) {
+  
+        <p class="no-comments">No comments yet. Be the first to leave a comment!</p>
+  
+  
+      } @else {
+  
+  
+        @for (comment of comments; track $index) {
+  
+          <div class="comment-item">
+  
+  
+            <div class="comment-avatar">{{ comment.name.charAt(0).toUpperCase() }}</div>
+  
+  
+            <div class="comment-content">
+  
+              <div class="comment-header">
+  
+                <h4 class="comment-author">{{ comment.name }}</h4>
+  
+  
+                <span class="comment-date">{{ comment.date | date:'medium' }}</span>
+  
+  
+              </div>
+  
+  
+              <p class="comment-text">{{ comment.message }}</p>
+  
+  
             </div>
-            
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input 
-                type="email" 
-                id="email" 
-                formControlName="email" 
-                class="form-control"
-                [class.is-invalid]="emailControl?.invalid && (emailControl?.dirty || emailControl?.touched)"
-              >
-              @if (emailControl?.invalid && (emailControl?.dirty || emailControl?.touched)) {
-                <div class="error-message">
-                  @if (emailControl?.errors?.['required']) {
-                    <span>Email is required</span>
-                  } @else if (emailControl?.errors?.['email']) {
-                    <span>Please enter a valid email address</span>
-                  }
-                </div>
-              }
-            </div>
-            
-            <div class="form-group">
-              <label for="message">Comment</label>
-              <textarea 
-                id="message" 
-                formControlName="message" 
-                rows="4" 
-                class="form-control"
-                [class.is-invalid]="messageControl?.invalid && (messageControl?.dirty || messageControl?.touched)"
-              ></textarea>
-              @if (messageControl?.invalid && (messageControl?.dirty || messageControl?.touched)) {
-                <div class="error-message">
-                  @if (messageControl?.errors?.['required']) {
-                    <span>Comment is required</span>
-                  }
-                </div>
-              }
-            </div>
-            
-            <button type="submit" class="btn btn-primary" [disabled]="commentForm.invalid">Submit Comment</button>
-          </form>
-        </div>
-      </section>
+  
+  
+          </div>
+  
+  
+        }
+  
+  
+      }
+  
     </div>
+  
+  
+    <div class="comment-form-container">
+  
+      <h3>Leave a Comment</h3>
+  
+      <form [formGroup]="commentForm" (ngSubmit)="submitComment()" class="comment-form">
+  
+        <div class="form-group">
+  
+          <label for="name">Name</label>
+  
+          <input 
+  
+          type="text" 
+  
+          id="name" 
+  
+          formControlName="name" 
+  
+          class="form-control"
+  
+          aria-label="Your name"
+  
+          [class.is-invalid]="nameControl?.invalid && (nameControl?.dirty || nameControl?.touched)"
+  
+          >
+  
+          @if (nameControl?.invalid && (nameControl?.dirty || nameControl?.touched)) {
+  
+            <div class="error-message">
+  
+              @if (nameControl?.errors?.['required']) {
+  
+                <span>Name is required</span>
+  
+              }
+  
+            </div>
+  
+          }
+  
+        </div>
+              <div class="form-group">
+  
+                <label for="email">Email</label>
+  
+                <input 
+  
+                type="email" 
+  
+                id="email" 
+  
+                formControlName="email" 
+  
+                class="form-control"
+  
+                aria-label="Your email"
+  
+                [class.is-invalid]="emailControl?.invalid && (emailControl?.dirty || emailControl?.touched)"
+  
+                >
+  
+                @if (emailControl?.invalid && (emailControl?.dirty || emailControl?.touched)) {
+                      <div class="error-message">
+                          @if (emailControl?.errors?.['required']) {
+  
+                            <span>Email is required</span>
+  
+                          } @else if (emailControl?.errors?.['email']) {
+                              <span>Please enter a valid email address</span>
+                          }
+                      </div>
+                  }
+              </div>
+              
+              
+              <div class="form-group">
+              
+              
+                <label for="message">Comment</label>
+              
+                <textarea 
+              
+                id="message" 
+              
+                formControlName="message" 
+              
+                rows="4" 
+              
+                class="form-control"
+              
+                aria-label="Your comment"
+              
+                [class.is-invalid]="messageControl?.invalid && (messageControl?.dirty || messageControl?.touched)"
+              
+              
+                ></textarea>
+              
+                @if (messageControl?.invalid && (messageControl?.dirty || messageControl?.touched)) {
+              
+                  <div class="error-message">
+              
+                    @if (messageControl?.errors?.['required']) {
+              
+                      <span>Comment is required</span>
+              
+                    }
+                      </div>
+             
+                    }
+             
+                  </div>
+             
+                  <button type="submit" class="btn btn-primary" [disabled]="commentForm.invalid">Submit Comment</button>
+          
+                </form>
+
+
+      </div>
+
+  </section>
+
+
+</div>

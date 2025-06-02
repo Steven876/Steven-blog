@@ -1,15 +1,19 @@
 /* Global Styles */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+
+
+
 :root {
   /* Primary Colors */
-  --primary-color: #0a1309;
+  --primary-color: #a5782699;
+  
   --primary-light: #3f5167;
-  --primary-dark: #060b15;
+  --primary-dark: #7e560c99;
   
 
   /* Neutral Colors */
@@ -238,3 +242,5 @@ p {
   from { transform: translateY(20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
+

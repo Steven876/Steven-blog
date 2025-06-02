@@ -1,162 +1,177 @@
 <div class="container">
 
 
-
-
     <section class="about-header fade-in">
 
 
         <h1 class="page-title">About Me</h1>
         <p class="page-subtitle">Computer Science Student | Aspiring Software Developer</p>
-
-
+        
     </section>
+
+
 
     <section class="about-content slide-up">
 
 
+      <div class="profile-image-container">
+          
+        <img src="assets/stevenpic.jpg" alt="Steven Armstrong, Computer Science student" class="profile-image">
 
-        <div class="profile-image-container">
+      </div>
+
+        
+        
+      <div class="card background-card slide-up">
 
 
-          <!-- <img src="/imgtest.png" alt="Steven Armstrong" class="profile-image"> -->
-          <img src="assets/stevenpic.jpg" alt="" class="profile-image">
+        <h2 class="section-heading">Background</h2>
+        
+        
+        <p>
+            
+          Hi there! I hope you're doing well. I'm Steven Armstrong, a passionate 
+          Computer Science student currently pursuing my degree at the University of 
+          Technology, Jamaica.
+
+
+        </p>
+
+        <p>
+
+          My journey into the world of software development began when I was a child. I used to 
+          spend hours playing video games with friends and family until one day, I found myself 
+          wondering, how are games even made? That single question sparked my curiosity and set 
+          me on the path I'm on today. Since then, I've been fascinated by how technology can solve real world 
+          problems and even more excited by the idea that I could be the one building those solutions.
+
+
+        </p>
+        
+        <p>
+        
+          Throughout my academic career, I've explored various pathways in computer science, 
+          from data structures and algorithms to software design methodologies. This blog is 
+          my space to document what I'm learning, showcase my projects, and connect with fellow 
+          tech enthusiasts along the way.
+
+
+        </p>
+
+
+      </div>
+
+        
+      
+      <div class="card skills-card slide-up">
+
+        <h2 class="section-heading">Skills & Expertise</h2>
+
+        
+        <div class="skills-container">
+
+
+          @for (skill of skills; track skill) {
+
+
+            <div class="skill-badge">
+                <span class="skill-prefix">-</span>
+                {{ skill }}
+
+            </div>
+          
+          
+          }
+
 
         </div>
 
-        <div class="card background-card">
 
 
-          <h2 class="section-heading">Background</h2>
+      </div>
+
+        <div class="card aspirations-card slide-up">
+
+            <h2 class="section-heading">Aspirations</h2>
+
+            <p>
+
+                As I progress in my studies and gain more hands-on experience, my goal is to 
+                become a versatile software developer capable of contributing to impactful projects. 
+                I am particularly interested in web development and exploring the potential of AI/ML.
+
+            </p>
 
 
-          <p>
+            <p>
 
-
-            Hi there! I hope you're doing well. I'm Steven Armstrong, a passionate 
-            Computer Science student currently pursuing my degree at the University of 
-            Technology, Jamaica.
-          
-          
-          </p>
-
-
-          <p>
-
-
-            My journey into the world of software development began when I was a child. I used to 
-            spend hours playing video games with friends and family until one day, I found myself 
-            wondering, how are games even made? That single question sparked my curiosity and set 
-            me on the path I'm on today. Since then, I've been fascinated by how technology can solve real world 
-            problems and even more excited by the idea that I could be the one building those solutions.
-          
-          
-          
-          </p>
-
-
-
-          <p>
-
-            Throughout my academic career, I've explored various pathways in computer science, 
-            from data structures and algorithms to software design methodologies. This blog is 
-            my space to document what I'm learning, showcase my projects, and connect with fellow 
-            tech enthusiasts along the way.
-
-
-          </p>
-
-
-
-
-        </div>
-
-
-
-        <div class="card skills-card">
-
-
-
-          <h2 class="section-heading">Skills & Expertise</h2>
-          
-          <div class="skills-container">
-
-
-            @for (skill of skills; track skill) {
-
-              <div class="skill-badge">{{ skill }}</div>
-            
-            
-            }
-          
-          
+                I am eager to learn, collaborate, and tackle new challenges. I believe in continuous 
+                improvement and am always looking for opportunities to expand my skillset and contribute 
+                to the tech community.
+            </p>
+        
+        
           </div>
-        
-        
-        
-        
-        </div>
 
-        
-        
-        <div class="card aspirations-card">
-          
-        
-        <h2 class="section-heading">Aspirations</h2>
-
-
-          <p>
-
-
-            As I progress in my studies and gain more hands-on experience, my goal is to 
-            become a versatile software developer capable of contributing to impactful projects. 
-            I am particularly interested in web development and exploring the potential of AI/ML.
-          
-          </p>
+        <div class="card summary-card slide-up">
 
           
-          <p>
+            <h2 class="section-heading">Professional Summary</h2>
+            
+            <p>
+              
+              Motivated and innovative Computer Science student with a strong foundation in software 
+              development, AI technologies, and web development. Proficient in Python, Java, JavaScript, 
+              and database management, with a keen interest in contributing to advanced projects in 
+              software engineering and AI, seeking opportunities to apply my
+              technical expertise and passion for technology in real-world applications.
+            
+            </p>
+        
+        
+          </div>
+
+        
+          <div class="card connect-card slide-up">
+
+            <h2 class="section-heading">Connect with Me</h2>
+
+            <p>Feel free to reach out or check out my work on these platforms:</p>
+
+            <div class="social-links">
 
 
-            I am eager to learn, collaborate, and tackle new challenges. I believe in continuous 
-            improvement and am always looking for opportunities to expand my skillset and contribute 
-            to the tech community.
-          
-          </p>
+                <a href="https://github.com/Steven876" target="_blank" class="social-link" aria-label="GitHub profile">
+                    GitHub
+                </a>
+
+
+                <a href="https://www.linkedin.com/in/steven-armstrong-395804188/" target="_blank" class="social-link" aria-label="LinkedIn profile">
+                    LinkedIn
+                </a>
 
 
 
 
+                <a href="mailto:stevenarmstrong956@gmail.com" class="social-link" aria-label="Email me">
+                    Email
+                </a>
 
 
-
-        </div>
-
+            </div>
 
 
-        <div class="card summary-card">
-
-
-          <h2 class="section-heading">Professional Summary</h2>
-
-
-          <p>
-
-
-            Motivated and innovative Computer Science student with a strong foundation in software 
-            development, AI technologies, and web development. Proficient in Python, Java, JavaScript, 
-            and database management, with a keen interest in contributing to advanced projects in 
-            software engineering and AI, seeking opportunities to apply my
-            technical expertise and passion for technology in real-world applications.
-
-
-          </p>
-
+            <a href="assets/Resume.pdf" download class="btn btn-primary mt-3">Download Resume</a>
 
 
         </div>
+
 
     </section>
+
+
+
+
 
 
 </div>

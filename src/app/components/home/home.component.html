@@ -1,86 +1,134 @@
-
 <div class="container">
 
 
     <section class="hero-section fade-in">
-
-
-        <h1 class="page-title">Steven's Programming Journey</h1>
-
+    
+        <h1 class="page-title">Welcome to My Blog!</h1>
+    
         <p class="page-subtitle">
-
+    
             I'm Steven Armstrong, a Computer Science student at UTECH Jamaica who's passionate about software development, and web technologies.<br>
-
             This is just a side project of mine showing chronicles of projects and learnings in my world of software development.
-          
+    
         </p>
-
+    
+    
+    
+        <div class="profile-image text-center mt-4">
+    
+            <img src="assets/stevenpic.jpg" alt="Steven Armstrong" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary-color);">
+    
+        </div>
+    
+        <a routerLink="/projects" class="btn btn-primary mt-3">Explore My Posts</a>
+    
+    
+    
+    
     </section>
 
-
+    
     <section class="timeline-section slide-up">
+    
         <h2 class="section-title">My Journey</h2>
+    
+    
         <ul class="timeline">
-            <li><strong>2022:</strong> Started BSc in Computing at UTECH</li>
-            <li><strong>2023:</strong> Built my first demo web app</li>
-            <li><strong>2024:</strong> Started doing small projects to test my skills</li>
-            <li><strong>2025:</strong> Focused on Angular + Spring Boot projects</li>
+    
+            <li style="--index: 1;"><strong>2022:</strong> Started BSc in Computing at UTECH</li>
+            <li style="--index: 2;"><strong>2023:</strong> Built my first demo web app</li>
+            <li style="--index: 3;"><strong>2024:</strong> Started doing small projects to test my skills</li>
+            <li style="--index: 4;"><strong>2025:</strong> Focused on Angular + Spring Boot projects</li>
+    
         </ul>
+    
+    
+    
     </section>
 
-
-
-
+    
     <section class="skills-section slide-up">
+    
         <h2 class="section-title">Tech Stack</h2>
-        <p class="skills">JavaScript / TypeScript, Angular, Spring Boot, PostgreSQL, Java</p>
-        <!-- <ul class="tech-stack-list">
+    
+    
+        <ul class="skills">
             <li>JavaScript / TypeScript</li>
             <li>Angular</li>
             <li>Spring Boot</li>
             <li>PostgreSQL</li>
             <li>Java</li>
-            <li>Linux & IPC</li>
-        </ul> -->
+    
+        </ul>
+    
+    
     </section>
 
-
-
+    
+    
     <section class="projects-section slide-up">
-
-
+    
+    
         <h2 class="section-title">Featured Projects</h2>
-        
-        
+    
+    
         <div class="grid grid-3">
-
-
+    
             @for (project of featuredProjects; track project.id) {
-                
-                <app-project-card [project]="project"></app-project-card>
-
+                <app-project-card [project]="project" class="fade-in"></app-project-card>
             }
-        
     
         </div>
-
-
+    
+    
         <div class="text-center mt-4">
-
-            
-          <a routerLink="/projects" class="btn btn-primary">View All Projects</a>
-
+    
+    
+            <a routerLink="/posts" class="btn btn-primary">View All Posts</a>
+    
         </div>
-
-
+    
     </section>
 
+    
+    <section class="newsletter-section text-center py-5 slide-up">
+    
+    
+    
+        <h2 class="section-title">Stay Updated</h2>
+    
+        <p class="section-subtitle">Get the latest posts and tech insights in your inbox.</p>
+    
+    
+        <form class="mt-3">
+      
+            <input type="email" placeholder="Enter your email" class="px-3 py-2" style="border-radius: var(--border-radius-sm); border: 1px solid var(--neutral-400);" aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary ml-2">Subscribe</button>
+      
+        </form>
+    </section>
 
-
+    
     <section class="quote fade-in">
+    
         <blockquote>
-            "Strive not to be a success, but rather to be of value." – Albert Einstein
+            The best way to predict the future is to create it.
+            <cite>– Steven Armstrong</cite>
+    
         </blockquote>
+    
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </div>
