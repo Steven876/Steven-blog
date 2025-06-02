@@ -1,0 +1,14 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-contact',
+  standalone: true,
+  imports: [CommonModule],
+  styleUrls: ['./contact.component.css'],
+  templateUrl: './contact.component.html',
+
+})
+
+
+export class ContactComponent {}

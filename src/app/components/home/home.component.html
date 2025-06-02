@@ -1,0 +1,47 @@
+
+<div class="container">
+
+
+    <section class="hero-section fade-in">
+
+
+        <h1 class="page-title">Steven's Programming Journey</h1>
+
+        <p class="page-subtitle">
+
+          Chronicles of projects, experiences, and learnings in the world of software development.
+        </p>
+
+    </section>
+
+
+    <section class="projects-section slide-up">
+
+
+        <h2 class="section-title">Featured Projects</h2>
+        
+        
+        <div class="grid grid-3">
+
+
+            @for (project of featuredProjects; track project.id) {
+                
+                <app-project-card [project]="project"></app-project-card>
+
+            }
+        
+    
+        </div>
+
+
+        <div class="text-center mt-4">
+
+            
+          <a routerLink="/projects" class="btn btn-primary">View All Projects</a>
+
+        </div>
+
+
+    </section>
+
+</div>
