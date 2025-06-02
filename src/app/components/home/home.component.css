@@ -19,6 +19,27 @@
 }
 
 
+.quote{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.timeline, .skills{
+    text-align: center;
+    align-items: center;
+    list-style-position: inside;
+}
+
+.skills-section{
+
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+
+
+
+
 .page-subtitle {
     
     font-size: 1.2rem;
