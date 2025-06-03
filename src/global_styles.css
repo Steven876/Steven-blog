@@ -2,19 +2,14 @@
 
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   /* Primary Colors */
   --primary-color: #a5782699;
-  
+
   --primary-light: #3f5167;
   --primary-dark: #7e560c99;
-  
 
   /* Neutral Colors */
   --neutral-50: #f8fafc;
@@ -27,62 +22,56 @@
   --neutral-700: #334155;
   --neutral-800: #1e293b;
   --neutral-900: #0f172a;
-  
+
   /* Status Colors */
   --success: #10b981;
   --warning: #f59e0b;
   --error: #ef4444;
-  
+
   /* Spacing */
-  --space-1: 0.5rem; 
-  --space-2: 1rem;  
-  --space-3: 1.5rem;  
-  --space-4: 2rem;  
-  --space-5: 2.5rem; 
-  --space-6: 3rem; 
-  
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 2.5rem;
+  --space-6: 3rem;
+
   /* Borders & Shadows */
   --border-radius-sm: 0.25rem;
   --border-radius-md: 0.5rem;
   --border-radius-lg: 1rem;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-
-
-
-
 * {
-
-
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
-
-
-html, body {
-
-
-  font-family: 'Roboto Condensed', sans-serif;
+html,
+body {
+  font-family: "Roboto Condensed", sans-serif;
   background-color: var(--neutral-100);
   color: var(--neutral-800);
   line-height: 1.5;
   scroll-behavior: smooth;
-
 }
 
-h1, h2, h3, h4, h5, h6 {
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: var(--space-2);
   font-weight: 600;
   line-height: 1.2;
   color: var(--neutral-900);
-
 }
 
 h1 {
@@ -114,17 +103,13 @@ p {
 }
 
 .container {
-
-
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: var(--space-2);
-
 }
 
 .card {
-
   background-color: white;
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-md);
@@ -193,36 +178,86 @@ p {
   .grid-2 {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .grid-3 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* Utility Classes */
-.mb-1 { margin-bottom: var(--space-1); }
-.mb-2 { margin-bottom: var(--space-2); }
-.mb-3 { margin-bottom: var(--space-3); }
-.mb-4 { margin-bottom: var(--space-4); }
-.mb-5 { margin-bottom: var(--space-5); }
+.mb-1 {
+  margin-bottom: var(--space-1);
+}
+.mb-2 {
+  margin-bottom: var(--space-2);
+}
+.mb-3 {
+  margin-bottom: var(--space-3);
+}
+.mb-4 {
+  margin-bottom: var(--space-4);
+}
+.mb-5 {
+  margin-bottom: var(--space-5);
+}
 
-.mt-1 { margin-top: var(--space-1); }
-.mt-2 { margin-top: var(--space-2); }
-.mt-3 { margin-top: var(--space-3); }
-.mt-4 { margin-top: var(--space-4); }
-.mt-5 { margin-top: var(--space-5); }
+.mt-1 {
+  margin-top: var(--space-1);
+}
+.mt-2 {
+  margin-top: var(--space-2);
+}
+.mt-3 {
+  margin-top: var(--space-3);
+}
+.mt-4 {
+  margin-top: var(--space-4);
+}
+.mt-5 {
+  margin-top: var(--space-5);
+}
 
-.py-1 { padding-top: var(--space-1); padding-bottom: var(--space-1); }
-.py-2 { padding-top: var(--space-2); padding-bottom: var(--space-2); }
-.py-3 { padding-top: var(--space-3); padding-bottom: var(--space-3); }
-.py-4 { padding-top: var(--space-4); padding-bottom: var(--space-4); }
-.py-5 { padding-top: var(--space-5); padding-bottom: var(--space-5); }
+.py-1 {
+  padding-top: var(--space-1);
+  padding-bottom: var(--space-1);
+}
+.py-2 {
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+}
+.py-3 {
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+}
+.py-4 {
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-4);
+}
+.py-5 {
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-5);
+}
 
-.px-1 { padding-left: var(--space-1); padding-right: var(--space-1); }
-.px-2 { padding-left: var(--space-2); padding-right: var(--space-2); }
-.px-3 { padding-left: var(--space-3); padding-right: var(--space-3); }
-.px-4 { padding-left: var(--space-4); padding-right: var(--space-4); }
-.px-5 { padding-left: var(--space-5); padding-right: var(--space-5); }
+.px-1 {
+  padding-left: var(--space-1);
+  padding-right: var(--space-1);
+}
+.px-2 {
+  padding-left: var(--space-2);
+  padding-right: var(--space-2);
+}
+.px-3 {
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
+}
+.px-4 {
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+.px-5 {
+  padding-left: var(--space-5);
+  padding-right: var(--space-5);
+}
 
 /* Animation Classes */
 .fade-in {
@@ -230,8 +265,12 @@ p {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .slide-up {
@@ -239,8 +278,12 @@ p {
 }
 
 @keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
-
-
